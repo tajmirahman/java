@@ -1,0 +1,19 @@
+/*var a=10;
+var b=20;
+var sum= (a+b);
+var ostad= "48 live class";
+console.log(sum);
+console.log(ostad);
+
+
+var tajmilur={
+    name:"tajmilur",
+    height: 5.8,
+    color: "black & white", 
+}
+console.log(tajmilur);
+*/
+
+var country=["Bangladsh",'India','Napel','Vhutan']
+
+console.log(country);

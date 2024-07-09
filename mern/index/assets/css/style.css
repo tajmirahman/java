@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.text-red{
+    color: red !important;
+}
+
+.text-align {
+    text-align: justify !important;
+  }
+
+.bg-gray{
+    background-color: gainsboro;
+}
