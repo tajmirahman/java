@@ -111,7 +111,7 @@ server.listen(4040, function () {
 });
 
 
-*/
+
 
 // 4. Fs  Rename Methods using  Asynchronous
 
@@ -137,6 +137,81 @@ const server= http.createServer(function(req,res){
 
             }
         });
+
+
+    }
+
+
+});
+
+server.listen(4040,function(){
+    console.log("Surver Is Running");
+});
+
+
+
+
+
+// 5. Fs  Delete Methods using  Asynchronous
+
+const fs= require("fs");
+const http= require("http");
+
+const server= http.createServer(function(req,res){
+
+
+    // Using Asynchronous Methods
+
+    if(req.url=="/"){
+
+        fs.unlink('demoSync.html',function(error){
+            if(error){
+                res.writeHead(200,{'content-type':'text/html'});
+                res.write("File Delete Fail");
+                res.end();
+            }else{
+                res.writeHead(200,{'content-type':'text/html'});
+                res.write("File Delete Success");
+                res.end();
+
+            }
+        });
+
+
+    }
+
+
+});
+
+server.listen(4040,function(){
+    console.log("Surver Is Running");
+});
+
+
+*/
+
+// 6. Fs  Exits Methods using  Synchronous
+
+const fs= require("fs");
+const http= require("http");
+
+const server= http.createServer(function(req,res){
+
+
+    // Using Asynchronous Methods
+
+    if(req.url=="/"){
+
+        let result=fs.existsSync('demo.html')
+            if(result){
+                
+                res.end("File Ache");
+            }else{
+                
+                res.end("file Nai");
+
+            }
+        
 
 
     }
